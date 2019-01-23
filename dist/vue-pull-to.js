@@ -208,22 +208,22 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var TOP_DEFAULT_CONFIG = {
-  pullText: '下拉刷新',
-  triggerText: '释放更新',
-  loadingText: '加载中...',
-  doneText: '加载完成',
-  failText: '加载失败',
+  pullText: 'Pull',
+  triggerText: 'Update',
+  loadingText: 'Loading...',
+  doneText: 'Loading completed',
+  failText: 'Error',
   loadedStayTime: 400,
   stayDistance: 50,
   triggerDistance: 70
 };
 
 var BOTTOM_DEFAULT_CONFIG = {
-  pullText: '上拉加载',
-  triggerText: '释放更新',
-  loadingText: '加载中...',
-  doneText: '加载完成',
-  failText: '加载失败',
+  pullText: 'Pull',
+  triggerText: 'Update',
+  loadingText: 'Loading...',
+  doneText: 'Loading completed',
+  failText: 'Error',
   loadedStayTime: 400,
   stayDistance: 50,
   triggerDistance: 70
@@ -496,7 +496,7 @@ exports.default = {
     handleTouchStart: function handleTouchStart(event) {
       this.startY = event.touches[0].clientY;
       this.beforeDiff = this.diff;
-      this.startScrollTop = this.scrollEl.scrollY;
+      this.startScrollTop = window.scrollY;
       this.bottomReached = this.checkBottomReached();
     },
     handleTouchMove: function handleTouchMove(event) {
